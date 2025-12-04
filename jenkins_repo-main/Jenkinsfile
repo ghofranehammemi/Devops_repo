@@ -30,8 +30,10 @@ pipeline {
         
         stage('Compile') {
             steps {
-               // sh 'mvn clean compile'
-                echo 'Compilation skipped (no Maven project)'
+                dir('C:/Users/hammemi/Downloads/jenkins_repo-main/jenkins_repo-main') {
+                    sh 'mvn clean compile'
+                }
+
 
             }
         }
