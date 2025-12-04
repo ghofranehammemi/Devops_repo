@@ -22,21 +22,9 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/ghofranehammemi/Devops_repo'
-
-                // CRITICAL: Debug commands to see repository structure
-                echo '=== Repository Root Contents ==='
-                sh 'ls -la'
-
-                echo '=== Searching for pom.xml ==='
-                sh 'find . -name pom.xml -type f'
-
-                echo '=== Full directory tree ==='
-                sh 'tree -L 3 || find . -type d -maxdepth 3'
+        steps {
+                git branch: 'main', url: 'https://github.com/ghofranehammemi/Devops_repo.git'
             }
-        }
 
         stage('Compile') {
             steps {
