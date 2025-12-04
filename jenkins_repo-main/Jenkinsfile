@@ -30,9 +30,10 @@ pipeline {
         
         stage('Compile') {
             steps {
-                dir('C:/Users/hammemi/Downloads/jenkins_repo-main/jenkins_repo-main') {
-                    sh 'mvn clean compile'
-                }
+              dir('C:/Users/hammemi/Downloads/jenkins_repo-main/jenkins_repo-main') {
+                  sh 'mvn clean compile'
+              }
+
 
 
             }
